@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaGPT Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #1e1e28;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+    <div class="w-full max-w-7xl mb-6">
+        <div class="flex items-center gap-2">
+            <div class="bg-teal-500 text-white px-3 py-1 font-bold rounded">ChaGPT</div>
+            <span class="font-bold text-lg">ChaGPT에 오신 것을 환영합니다.</span>
+        </div>
+    </div>
+
+    <div class="w-full max-w-7xl flex flex-col md:flex-row gap-6">
+        <!-- Left Panel (65%) - 실제 Gemini iframe 삽입 -->
+        <div class="md:w-[65%] bg-[#f4f7f6] rounded-xl overflow-hidden min-h-[600px] shadow-lg relative flex">
+            <iframe 
+                src="https://gemini.google.com/app" 
+                class="w-full h-full min-h-[600px] border-none" 
+                title="Google Gemini"
+                allow="microphone; clipboard-write; clipboard-read">
+            </iframe>
+        </div>
+
+        <!-- Right Panel (35%) -->
+        <div class="md:w-[35%] flex flex-col gap-6">
+            <!-- Top Right Box -->
+            <div class="bg-[#242430] rounded-xl p-6 shadow-lg border border-gray-700 flex-grow">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-orange-400">⚡</span>
+                    <h2 class="font-bold text-lg text-gray-200">실전 현업 검증 프롬프트 모음</h2>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <a href="https://classroom.google.com/u/0/c/NDg2MjU3MjgzMDBa" target="_blank" class="bg-[#0f0f15] hover:bg-black text-gray-300 rounded-lg p-4 flex items-center justify-center gap-3 border border-gray-800 transition duration-200">
+                        <div class="w-6 h-6 flex items-center justify-center rounded bg-blue-600 border-2 border-blue-400 text-white text-xs">
+                            🏫
+                        </div>
+                        <span class="font-medium">클래스룸</span>
+                    </a>
+                    <button class="bg-[#0f0f15] hover:bg-black text-gray-500 rounded-lg p-4 flex items-center justify-center border border-gray-800 transition duration-200">
+                        test
+                    </button>
+                    <button class="bg-[#0f0f15] hover:bg-black text-gray-500 rounded-lg p-4 flex items-center justify-center border border-gray-800 transition duration-200">
+                        test
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Right Box -->
+            <div class="bg-[#242430] rounded-xl p-6 shadow-lg border border-gray-700">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-pink-400">📄</span>
+                    <h2 class="font-bold text-lg text-gray-200">최근 공유한 기술 아티클</h2>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <a href="https://chagihong76.github.io/AX-Tool/" target="_blank" class="bg-[#0f0f15] hover:bg-black text-gray-300 rounded-lg p-4 flex items-center justify-center gap-3 border border-gray-800 transition duration-200">
+                        <div class="w-6 h-6 flex items-center justify-center rounded bg-blue-600 border-2 border-blue-400 text-white text-xs">
+                            🏢
+                        </div>
+                        <span class="font-medium">AX-아키텍처팀</span>
+                    </a>
+                    <button class="bg-[#0f0f15] hover:bg-black text-gray-500 rounded-lg p-4 flex items-center justify-center border border-gray-800 transition duration-200">
+                        test
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
